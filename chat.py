@@ -4,13 +4,11 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
-# Download required NLTK resources
 nltk.download("punkt", quiet=True)
 nltk.download("punkt_tab", quiet=True)
 nltk.download("wordnet", quiet=True)
 
 lemmatizer = WordNetLemmatizer()
-
 
 def preprocess_text(text: str) -> set[str]:
     """Tokenize, lowercase, and lemmatize user input to handle varied phrasing."""
